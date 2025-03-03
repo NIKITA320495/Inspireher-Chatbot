@@ -204,7 +204,7 @@ def query_llm_directly(user_query, context=None, chat_history=None):
         return f"Error: {str(e)}"
 
 
-@app.route('/chat', methods=['POST'])
+@app.route('/', methods=['POST'])
 def chat_endpoint():
     try:
         data = request.get_json()
