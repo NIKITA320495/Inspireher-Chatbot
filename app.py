@@ -24,9 +24,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# 1. Hugging Face Hub API Token
-HUGGINGFACEHUB_API_TOKEN = ""
-OPENAI_API_KEY = ""  # Your provided API key
+HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN", "")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
 # Initialize OpenAI client
 client = OpenAI(
